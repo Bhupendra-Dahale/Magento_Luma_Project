@@ -1,3 +1,5 @@
-public Class TC_005_AdvanceSearch{
+package testCases;
+
+public class TC_005_AdvanceSearch{
 //Will Add some code latter
 }
