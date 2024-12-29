@@ -50,6 +50,13 @@ public class ExtentReportManager implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		test = extent.createTest(result.getName());
 		test.log(Status.PASS, "Test Passed");
+		
+		try {
+			String imgPath = new BaseClass().captureScreen(result.getName());
+			test.addScreenCaptureFromPath(imgPath);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 	}
 
 	public void onTestFailure(ITestResult result) {
@@ -69,6 +76,13 @@ public class ExtentReportManager implements ITestListener {
 		test = extent.createTest(result.getName());
 		test.log(Status.SKIP, "Test Skipped");
 		test.log(Status.SKIP, result.getThrowable().getMessage());
+		
+		try {
+			String imgPath = new BaseClass().captureScreen(result.getName());
+			test.addScreenCaptureFromPath(imgPath);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 	}
 
 	public void onFinish(ITestContext testContext) {

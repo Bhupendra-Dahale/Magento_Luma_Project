@@ -6,14 +6,19 @@
   </listeners>
   <test thread-count="5" name="MagentoTest(failed)">
     <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="Regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="testCases.TC_003_SignIn_DataDriver">
+      <class name="testCases.TC_001_AccountRegistrationTest">
         <methods>
+          <include name="test_account_Registration"/>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="dataDriver" invocation-numbers="4"/>
         </methods>
-      </class> <!-- testCases.TC_003_SignIn_DataDriver -->
+      </class> <!-- testCases.TC_001_AccountRegistrationTest -->
     </classes>
   </test> <!-- MagentoTest(failed) -->
 </suite> <!-- Failed suite [MagentoSuite] -->

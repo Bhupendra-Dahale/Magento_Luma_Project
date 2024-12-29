@@ -23,7 +23,7 @@ public class TC_003_SignIn_DataDriver extends BaseClass{
 		
 			log.info("Entering the user data");
 			
-			Thread.sleep(3000);
+		Thread.sleep(3000);
 		SignInPage signIn=new SignInPage(driver);
 		signIn.username(email);
 		signIn.password(password);

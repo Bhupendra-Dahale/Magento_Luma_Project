@@ -16,8 +16,7 @@ public class HomePage extends BasePage {
 	
 	@FindBy(css = "div[class='panel header'] li[data-label='or'] a")
 	WebElement signIn;
-
-
+	
 	// Action Methods
 	public void createAnAccount() {
 		createAcc.click();

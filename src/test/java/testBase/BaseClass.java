@@ -27,6 +27,10 @@ import org.testng.annotations.Parameters;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+//User define annotation
+import java.lang.reflect.Method;
+import org.testng.ITestResult;
+
 public class BaseClass {
 
 	public static WebDriver driver;
@@ -71,6 +75,7 @@ public class BaseClass {
 		driver.manage().window().maximize();
 	}
 	
+	
 	@AfterClass(groups= {"Regression","Sanity","Master"})
 	public void tearDown()
 	{
@@ -94,6 +99,7 @@ public class BaseClass {
 		return (st+"@"+num);
 	}
 
+	
 	public String captureScreen(String name) throws IOException {
 		
 		String timestamp=new SimpleDateFormat("yyyy-MM-dd.hh-mm-ss").format(new Date());
@@ -110,5 +116,31 @@ public class BaseClass {
 		return destination;
 	}
 	
+	
+	/*
+	 * ****Method Used to capture Custome Annotation****
+	 * 
+	 * result.getMethod():
+	 * 		result:  is an instance of ITestResult, which represents the result of a test execution in TestNG.
+	 * 		getMethod():  returns an instance of ITestNGMethod, which represents the method being executed.
+	 * getConstructorOrMethod():
+	 * 		The getConstructorOrMethod() method of ITestNGMethod returns a ConstructorOrMethod object.
+	 * 		 This object can represent either the constructor (if test is constructor test) or the method being executed.
+	 * 		In the case of a standard test method, this will represent the method being run.
+	 * getMethod():
+	 * 		getMethod() is called on the ConstructorOrMethod object and returns a Method object.
+	 * 		This is the actual Java reflection method corresponding to the test method being executed.
+	 * 
+	 */
+	
+	public void getTestCaseID(ITestResult result) {
+		Method method = result.getMethod().getConstructorOrMethod().getMethod();
+		
+		if (method.isAnnotationPresent(TestCaseID.class)) {
+			
+	       TestCaseID testCaseID = method.getAnnotation(TestCaseID.class);
+	       System.out.println("Test Case ID: " + testCaseID.value());
+	    }
+	}
 	
 }

@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-28T16:17:39 IST" name="MagentoSuite" finished-at="2023-06-28T16:19:19 IST" duration-ms="99924">
+  <suite started-at="2024-09-30T00:34:18 IST" name="MagentoSuite" finished-at="2024-09-30T00:34:41 IST" duration-ms="23370">
     <groups>
+      <group name="Master">
+        <method signature="TC_001_AccountRegistrationTest.test_account_Registration()[pri:0, instance:testCases.TC_001_AccountRegistrationTest@821330f]" name="test_account_Registration" class="testCases.TC_001_AccountRegistrationTest"/>
+      </group> <!-- Master -->
+      <group name="Regression">
+        <method signature="TC_001_AccountRegistrationTest.test_account_Registration()[pri:0, instance:testCases.TC_001_AccountRegistrationTest@821330f]" name="test_account_Registration" class="testCases.TC_001_AccountRegistrationTest"/>
+      </group> <!-- Regression -->
     </groups>
-    <test started-at="2023-06-28T16:17:39 IST" name="MagentoTest" finished-at="2023-06-28T16:19:19 IST" duration-ms="99924">
-      <class name="testCases.TC_003_SignIn_DataDriver">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC_003_SignIn_DataDriver@312aa7c]" started-at="2023-06-28T16:17:40 IST" name="setup" finished-at="2023-06-28T16:17:47 IST" duration-ms="7299" status="PASS">
+    <test started-at="2024-09-30T00:34:18 IST" name="MagentoTest" finished-at="2024-09-30T00:34:41 IST" duration-ms="23370">
+      <class name="testCases.TC_001_AccountRegistrationTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC_001_AccountRegistrationTest@821330f]" started-at="2024-09-30T00:34:19 IST" name="setup" finished-at="2024-09-30T00:34:29 IST" duration-ms="9958" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,116 +24,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="dataDriver(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_003_SignIn_DataDriver@312aa7c]" started-at="2023-06-28T16:17:48 IST" name="dataDriver" data-provider="SignInData" finished-at="2023-06-28T16:18:00 IST" duration-ms="11704" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[jacksparow@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Pirate@carebian]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Valid]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="test_account_Registration()[pri:0, instance:testCases.TC_001_AccountRegistrationTest@821330f]" started-at="2024-09-30T00:34:29 IST" name="test_account_Registration" finished-at="2024-09-30T00:34:40 IST" duration-ms="10878" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dataDriver -->
-        <test-method signature="dataDriver(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_003_SignIn_DataDriver@312aa7c]" started-at="2023-06-28T16:18:00 IST" name="dataDriver" data-provider="SignInData" finished-at="2023-06-28T16:18:20 IST" duration-ms="20250" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[rockfordw@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Rockford@1500R]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataDriver -->
-        <test-method signature="dataDriver(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_003_SignIn_DataDriver@312aa7c]" started-at="2023-06-28T16:18:20 IST" name="dataDriver" data-provider="SignInData" finished-at="2023-06-28T16:18:39 IST" duration-ms="18865" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[micchelobama@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Micchel@fistlady]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataDriver -->
-        <test-method signature="dataDriver(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_003_SignIn_DataDriver@312aa7c]" started-at="2023-06-28T16:18:39 IST" name="dataDriver" data-provider="SignInData" finished-at="2023-06-28T16:19:00 IST" duration-ms="21149" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[jackdanial90@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[JackDanial@1212]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[valid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataDriver -->
-        <test-method signature="dataDriver(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_003_SignIn_DataDriver@312aa7c]" started-at="2023-06-28T16:19:00 IST" name="dataDriver" data-provider="SignInData" finished-at="2023-06-28T16:19:18 IST" duration-ms="18267" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[vladimirputin@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Vladimir@nuclear]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Invalid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataDriver -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_003_SignIn_DataDriver@312aa7c]" started-at="2023-06-28T16:19:18 IST" name="tearDown" finished-at="2023-06-28T16:19:19 IST" duration-ms="812" status="PASS">
+        </test-method> <!-- test_account_Registration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_001_AccountRegistrationTest@821330f]" started-at="2024-09-30T00:34:40 IST" name="tearDown" finished-at="2024-09-30T00:34:41 IST" duration-ms="1414" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC_003_SignIn_DataDriver -->
+      </class> <!-- testCases.TC_001_AccountRegistrationTest -->
     </test> <!-- MagentoTest -->
   </suite> <!-- MagentoSuite -->
 </testng-results>

@@ -1,14 +1,18 @@
 package testCases;
 
 import org.testng.Assert;
+
 import org.testng.annotations.Test;
 import pageObjects.AccountRegistrationPage;
 import pageObjects.HomePage;
 import testBase.BaseClass;
 
+import testBase.TestCaseID;
+
 public class TC_001_AccountRegistrationTest extends BaseClass{
 	
-	@Test(groups= {"Regression","Master"})
+	@TestCaseID("TestCaseID_123")
+	@Test(groups= {"Regression","Master"}, description= "TestCaseID=123")
 	public void test_account_Registration() throws InterruptedException
 	{
 		log.debug("...........Debugging is started..........");

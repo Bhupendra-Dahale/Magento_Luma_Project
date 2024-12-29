@@ -18,10 +18,10 @@ public class DataProviders {
 		
 		String data[][]=new String[rowno][colno];
 		
-		for(int i=1; i<=rowno; i++)
+		for(int i=1; i<=rowno; i++)			//0th index contains headers in the Excel hence we start from 1st index
 		{
 			for(int j=0; j<colno; j++) {
-				data[i-1][j]=excel.getCellData("User_Info", i, j);
+				data[i-1][j]=excel.getCellData("User_Info", i, j);	//Array starts with 0th index hence use i-1
 			}
 		}
 		
